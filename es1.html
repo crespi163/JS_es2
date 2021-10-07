@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>ES 1</title>
+    </head>
+    <boody>
+        <button onclick="console.log('click da evento')">cliccami da evento</button>
+        <button onclick="funzioneClick()">cliccami da script</button>
+        <button id="btn3">cliccami da listener</button>
+       
+       <script>
+        /*var funzioneClick=(function(){
+            console.log("click da script")
+        })();*/
+        //funzioneClick();
+        var funzioneClick = function(stringa){
+            console.log("click da "+stringa);
+        }; //TODO unica funzione
+
+        var bottone3 =document.getElementById("btn3");
+        bottone3.addEventListener("click", function(){
+            funzioneClick("listenner")
+            });
+</script>
+    </boody>
+</html>
