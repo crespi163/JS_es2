@@ -5,6 +5,9 @@
     <boody>
         <button onclick="console.log('click da evento')">cliccami da evento</button>
         <button onclick="funzioneClick()">cliccami da script</button>
+        <div id="div1">
+        <p>Non premere, per cortesia</p>
+        </div>
         <button id="btn3">cliccami da listener</button>
        
        <script>
@@ -14,12 +17,22 @@
         //funzioneClick();
         var funzioneClick = function(stringa){
             console.log("click da "+stringa);
-        }; //TODO unica funzione
+        }; 
+        var rosso=true;
+        var bottone3=document.getElementById("btn3");
+        bottone3.addEventLIstener("click", function() {
+         funzioneClick("listenner");
+         var div1=document.getElementById("div1");
+         div1.setAttribute("style", "background-color: pink");
+         div1.innerHTML= "<h1> TI AVEVO DETTO DI NON CLICCARE MINGHIONE<H1>"
+        })
 
         var bottone3 =document.getElementById("btn3");
         bottone3.addEventListener("click", function(){
             funzioneClick("listenner")
-            });
+            bottone3.setAttribute("style", "background-color: red");
+            }
+        );
 </script>
     </boody>
 </html>
