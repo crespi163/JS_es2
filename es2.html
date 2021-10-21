@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>JS ES 2</title>
+    </head>
+    <body>
+        <h1>JS ES 2</h1>
+        <h2>Static HTML page: excercise 1 but with JQuery</h2>
+     
+    <div>div 1</div>
+    <div>div 2</div>
+    <div id="div1">NON PREMERE IL BOTTONE!</div>
+    <button>CLICCAMI</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+    <script>
+
+        $("#div1").html("Non premere il bottone!");
+
+        var red=true;
+        $("#div1").cloick(function(){
+        $("#div1").attr("style", "background-color: rgb(255, 0, 255)");
+        $("#div1").html("Ti avevo detto di non premere MONA!");
+        if(rosso) {
+            $.attr("style", "background-color: RED");
+            rosso=false;
+        }else{
+            $("#btn1").removeAttr("style");
+            red=true;
+        }
+
+
+
+
+        });
+         
+         console.log($("#div1"));
+         console.log($("div"));
+
+        
+         $("body").append("<h3>aggiungo un titolo H3</h3>");
+         $("body").append("<button id='btn1'>CLICCA</button>");
+        </script>
+    </boody>
+</html>

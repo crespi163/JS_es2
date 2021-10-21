@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>JS ES 3</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <h1>JS ES 3</h1>
+        <h2>calcolatrice semplice</h2>
+        <table id="my" style="border: 2px solid">
+            <thead>
+                <tr style="border: 2px solid;">
+                    <td style="border: 2px solid;">N</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        numero: <input id="num" type="text"></input>
+        <button id="bt">add</button>
+
+        <script>
+            $("body").append($("<label id='lbl1'></label>"))
+            $("#bt").click(function () {
+                $("tbody").append("<tr style='border: 2px solid';><td style='border: 2px solid'>" + $("#num").val() + "</td></tr>");
+                $("#num").val("");
+            })
+        </script>
+    </body>
+</html>
